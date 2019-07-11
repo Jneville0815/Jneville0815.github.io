@@ -1,0 +1,98 @@
+body {
+	color: #333;
+	font-size: 100%;
+	margin: 0;
+}
+
+table, th, td {
+	border: 3px solid #333;
+	border-collapse: collapse;
+	padding: 15px;
+	background-color: white;
+}
+
+th {
+	text-align: center !important;
+	font-size: 2em; 
+}
+
+td {
+	text-align: center;
+	font-size: 2em;
+}
+
+h2 {
+	text-align: left; 
+	border-width: 3px;
+	border-style: solid;
+	border-color: #333;
+	background-color: white;
+	border-radius: 15px;
+	padding: 5px;
+	text-transform: uppercase;
+}
+
+img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 40%;
+}
+
+.jumbotron {
+	border: 3px solid #333;
+	height: 350px;
+	width: 100%;
+	display: block;
+	text-align: center;
+}
+
+.form-control {
+	margin: 0 auto;
+	width: 100% !important;
+}
+
+h4 {
+	text-align: center;
+}
+
+.days {
+	text-align: center;
+}
+
+.head {
+	display: flex;
+	justify-content: space-between;
+}
+
+a {
+	display: block;
+	font-size: 1.5rem;
+	color: black;
+	border: 2px solid black;
+	padding: 5px;
+	background-color: #e9ecef;
+	width: 20rem;
+	margin: 0 auto;
+	margin-top: 1rem;
+}
+
+a:hover {
+	font-weight: bold;
+	color: black;
+	text-decoration: none;
+}
+
+a:active {
+	transform: translateY(2px);
+}
+
+.link {
+	text-align: center;
+}
+
+h1 {
+	font-size: 2.5rem;
+	text-align: center;
+	text-decoration: underline;
+}

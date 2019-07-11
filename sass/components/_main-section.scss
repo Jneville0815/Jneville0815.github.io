@@ -1,0 +1,174 @@
+main {
+	@media screen and (max-width: 1100px) {
+		margin: 0 auto;
+	}
+}
+
+.main-section {
+	flex: 1;
+	min-width: 70rem;
+	margin-top: 9rem;
+	margin-left: 10rem;
+	margin-right: 10rem;
+	border-radius: 3px;
+	padding: 2rem;
+	box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+	word-wrap: break-word;
+
+	&__title {
+		font-size: 4rem;
+		border-bottom: 2px solid $color-grey-light-2;
+
+		@media screen and (max-width: 1100px) {
+			margin-top: 0;
+			width: 37rem;
+			margin-bottom: 4px;
+		}
+	}
+
+	&__text {
+		display: flex;
+		flex-direction: column;
+		margin-top: 2rem;
+		font-size: 2rem;
+
+		@media screen and (max-width: 1100px) {
+			margin-top: 0;
+			width: 37rem;
+		}
+	}
+
+	@media screen and (max-width: 1100px) {
+		flex: 0 0 100%;
+		margin-left: 0;
+		margin-right: 0;
+		margin-top: 1rem;
+		min-width: 0rem;
+	}
+}
+
+.main-pics {
+	display: flex;
+	justify-content: space-around;
+
+	&-1 {
+		width: 30rem;
+		height: 40rem;
+		box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+		border-radius: 4px;
+		align-self: center;
+		margin-bottom: 2rem;
+
+		@media screen and (max-width: 1100px) {
+			width: 22.5rem;
+			height: 30rem;
+		}
+	}
+
+	&-2{
+		width: 40rem;
+		height: 30rem;
+		align-self: center;
+		box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+		border-radius: 4px;
+
+		@media screen and (max-width: 1100px) {
+			margin-top: 2rem;
+			width: 30rem;
+			height: 22.5rem;
+		}
+	}
+
+	@media screen and (max-width: 1100px) {
+		flex-direction: column;
+	}
+}
+
+.icons {
+	display: flex;
+	justify-content: space-around;
+	margin-top: 3rem;
+
+	&__github {
+		height: 5rem;
+		width: 5rem;
+
+		&:active {
+			transform: translateY(.2rem);
+		}
+	}
+
+	&__facebook {
+		height: 5rem;
+		width: 5rem;
+
+		&:active {
+			transform: translateY(.2rem);
+		}
+	}
+}
+
+pre {
+	display: flex;
+}
+
+code {
+	padding-left: 1rem;
+	margin: 0 auto;
+	margin-bottom: 2rem;
+	width: 75rem;
+	border: 2px solid darken($color-grey-light-1, 10%);
+	background-color: $color-grey-light-1;
+	 white-space: pre-wrap;       
+	 white-space: -moz-pre-wrap;  
+	 white-space: -pre-wrap;      
+	 white-space: -o-pre-wrap;    
+	 word-wrap: break-word; 
+
+	@media screen and (max-width: 1100px) {
+		width: 37rem;
+		margin: 0;
+	}
+}
+
+samp {
+	padding-left: 1rem;
+	margin: 0 auto;
+	margin-bottom: 2rem;
+	width: 75rem;
+	border: 2px solid darken($color-grey-light-1, 10%);
+	background-color: #fff;
+}
+
+.output {
+	height: 60rem;
+	width: 70rem;
+	margin: 0 auto;
+	margin-bottom: 2rem;
+
+	@media screen and (max-width: 1100px) {
+		width: 37rem;
+		height: 30rem;
+		margin: 0 auto;
+	}
+}
+
+.craps-out {
+	height: 50rem;
+	width: 30rem;
+	margin: 0 auto;
+	margin-bottom: 2rem;
+
+	@media screen and (max-width: 1100px) {
+		width: 20rem;
+		height: 35rem;
+		margin: 0 auto;
+	}
+}
+
+.inline-code {
+	display: inline-block;
+	background-color: $color-grey-light-1;
+	border: 1px solid darken($color-grey-light-1, 10%);
+	font-family: monospace;
+}

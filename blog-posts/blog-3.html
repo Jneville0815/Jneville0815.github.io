@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../css/style.css">
+        <link href="https://fonts.googleapis.com/css?family=Noto+Serif" rel="stylesheet">
+        <link rel="shortcut icon" type="image/png" href="../img/favicon.ico">
+        
+        <title>Craps Dicegame - From The Terminal To The Browser</title>
+	</head>
+	<body>
+		<header class="header">
+			<h1 class="header__name">Jimmy Neville</h1>
+			<a href="../index.html" class="header__link">Home</a>
+			<a href="../index.html#SH1" class="header__link">About Me</a>
+			<a href="../index.html#SH2" class="header__link">Tutorials</a>
+			<a href="../index.html#SH3" class="header__link">Workout</a>
+			<a href="../index.html#SH4" class="header__link">Articles</a>
+			<a href="../index.html#SH5" class="header__link">Books</a>
+			<div class="icons">
+				<a href="https://www.facebook.com/jimmy.neville.733">
+					<svg class="icons__facebook">
+						<use xlink:href="../img/sprite.svg#icon-facebook"></use>
+					</svg>
+				</a>
+				<a href="https://github.com/jneville0815">
+					<svg class="icons__github">
+						<use xlink:href="../img/sprite.svg#icon-github"></use>
+					</svg>
+				</a>
+			</div>
+		</header>
+		<main>
+			<div class="small-screen">
+				<div class="navbar">
+					<h1 style="float: left; transform: translateY(-2rem);">Jimmy Neville</h1>
+					<div class="dropdown">
+						<button class="dropbtn">Menu
+							<i class="fa fa-caret-down"></i>
+						</button>
+						<div class="dropdown-content">
+							<a href="../index.html#SH0">Home</a>
+							<a href="../index.html#SH1">About Me</a>
+							<a href="../index.html#SH2">Tutorials</a>
+							<a href="../index.html#SH3">Workout</a>
+							<a href="../index.html#SH4">Articles</a>
+							<a href="../index.html#SH5">Books</a>
+						</div>
+					</div> 
+				</div>
+			</div>
+			
+			<div class="main-section">
+				<div class="main-section__title">
+					Craps Dicegame - From The Terminal To The Browser
+				</div>
+				<div class="main-section__text">
+					<p><i>6/29/2019</i> - One of the first programs I wrote in my intro to C++ class was a craps dice game. It was a fun little project, and I spent a lot of time on it so that it would run without bugs. You can see the source code <a href="https://github.com/Jneville0815/craps-dicegame/blob/master/craps-cpp/craps.cpp" class="in-text-link">here</a>, and the output looked like this:</p>
+
+					<img src="../img/craps-out.jpg" alt="output" class="craps-out">
+
+					<p>The rules are simple: You start out with $500 and you make a bet. If you roll a 7 or 11 on the first roll, you win the amount you bet. If you roll a 2 or 12 on the first roll, you lose the amount you bet. If you roll any other number, that number becomes your "target," and you keep rolling until you either roll your target number again (win money) or roll a 7 (lose money). At this point, assuming you still have money, you are asked to bet again, and the process repeats itself until you quit or run out of money.</p>
+
+					<p>I've been spending a lot of time this summer learning web design, and while in the process of completing a <a href="https://www.udemy.com/the-complete-javascript-course/" class="in-text-link">udemy course</a> on javascript, I got the idea to recreate my craps game as a web application. I tried to make the new version as close to the old version as I could. Some of the main things I practiced while making the app were: hiding/showing different elements at different times, using random variables to infuence images, and using good html naming conventions.</p>
+
+					<p>You can see the source code for the browser version <a href="https://github.com/Jneville0815/craps-dicegame/tree/master/craps-js" class="in-text-link">here</a>.</p>
+					
+					<p>Play the game <a href="../craps-js/index.html" class="in-text-link">here</a>, and post your high scores in the comment section!</p>
+
+					<hr>
+					<br>
+
+					<div 
+						class="just-comments" 
+						data-apikey="ac050acf-21a4-4141-bb36-c7997f35c2d8"
+						data-allowguests="true">
+					</div>
+					<script async src="https://just-comments.com/w.js"></script>	
+
+					<p><a href="../index.html" class="in-text-link top">Back to homepage</a></p>
+				</div>
+			</div>
+			<div class="footer">
+				Contact Me: Jneville0815@yahoo.com
+			</div>
+		</main>
+	</body>
+</html>

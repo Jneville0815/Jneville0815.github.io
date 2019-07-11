@@ -1,0 +1,118 @@
+.header {
+	height: 75rem;
+	flex: 0 0 17%;
+	max-width: 30rem;
+	display: flex;
+	flex-direction: column;
+	border-radius: 3px;
+	box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+
+	&__name {
+		text-align: center;
+		border-bottom: 2px solid $color-grey-light-2;
+	}
+
+
+	&__link {
+		text-align: center;
+		color: darken($color-primary, 10);
+		font-size: 3rem;
+		text-decoration: none;
+		border: 2px solid white;
+		margin: 1rem;
+
+		&:hover {
+			background-color: lighten($color-black, 90);
+			border-radius: 1rem;
+		}
+
+		&:active {
+			transform: translateY(.2rem);
+		}
+	}
+
+	@media screen and (max-width: 1100px) {
+		display: none;
+	}
+}
+
+
+
+//DROP DOWN NAV BAR FOR SMALL SCREENS
+.navbar {
+	overflow: hidden;
+	background-color: #fff;
+	border-radius: 3px;
+	padding: 2rem;
+	box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+	margin-top: 1rem;
+	padding-bottom: 0rem;
+}
+
+.navbar a {
+	float: left;
+	font-size: 16px;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	border-bottom: 1px solid lighten(black, 25%);
+
+	&:last-child {
+		border-bottom: 0;
+	}
+}
+
+.dropdown {
+	float: right;
+	overflow: hidden;
+}
+
+.dropdown .dropbtn {
+	font-size: 16px;  
+	border: none;
+	outline: none;
+	color: white;
+	padding: 14px 16px;
+	background-color: darken($color-primary, 10);
+	font-family: inherit;
+	margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+	background-color: lighten(black, 30%);
+}
+
+.dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: #f9f9f9;
+	width: 10rem;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index: 1;
+}
+
+.dropdown-content a {
+	float: none;
+	color: black;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+	text-align: left;
+}
+
+.dropdown-content a:hover {
+	background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+	display: block;
+}
+
+.small-screen {
+	display: none;
+
+	@media screen and (max-width: 1100px) {
+		display: block;
+	}
+}

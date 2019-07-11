@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Craps Dice Game</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="outer-container">
+
+		<div class="money-container">
+			<p>You have: $<span class="money-balance" id="total">0</span></p>
+			<button onclick="window.location.href = '../blog-posts/blog-3.html';" class="btn btn-black">Back</button>
+			<p>Current bet: $<span class="money-bet" id="bet">0</span></p>
+		</div>
+
+		<div class="bet-container">
+			Enter bet:
+			<form class="form">
+				<input type="number" class="bet-form" id="form-0">
+			</form>
+			<button type="submit" class="btn submit" onclick="enterBet()">Submit</button>
+		</div>
+
+		<div class="dice-container">
+			<img src="dice-1.png" alt="dice 1" class="dice" id="d-1">
+			<img src="dice-2.png" alt="dice 2" class="dice" id="d-2">
+		</div>
+
+		<div class="button-container">
+			<button type="submit" class="btn btn-roll">Roll!</button>
+			<button type="submit" class="btn play-again">Go again!</button>
+		</div>
+
+		<div class="output-container">
+			<p id="rolled">You rolled: <span id="current-roll">0</span></p>
+			<p id="current">CURRENT TARGET: <span id="current-target">0</span></p>
+			<p class="output-message" id="target-hit">Target hit!</p>
+
+			<p class="output-message" id="snake-eyes">Snake Eyes!</p>
+
+			<p class="output-message" id="box-cars">Box Cars!</p>
+
+			<p class="output-message" id="lucky-7">Lucky 7!</p>
+
+			<p class="output-message" id="unlucky-7">Unlucky 7!</p>
+
+			<p class="output-message" id="lucky-11">Lucky 11!</p>
+
+			<p class="output-message" id="success">Success!</p>
+
+			<span id="amount-changed"></span>
+		</div>
+	</div>
+  <script src="app.js"></script>
+</body>
+</html>

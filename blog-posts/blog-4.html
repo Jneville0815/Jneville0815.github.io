@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../css/style.css">
+        <link href="https://fonts.googleapis.com/css?family=Noto+Serif" rel="stylesheet">
+        <link rel="shortcut icon" type="image/png" href="../img/favicon.ico">
+        
+        <title>C++ Intro, Variables</title>
+	</head>
+	<body>
+		<header class="header">
+			<h1 class="header__name">Jimmy Neville</h1>
+			<a href="../index.html" class="header__link">Home</a>
+			<a href="../index.html#SH1" class="header__link">About Me</a>
+			<a href="../index.html#SH2" class="header__link">Tutorials</a>
+			<a href="../index.html#SH3" class="header__link">Workout</a>
+			<a href="../index.html#SH4" class="header__link">Articles</a>
+			<a href="../index.html#SH5" class="header__link">Books</a>
+			<div class="icons">
+				<a href="https://www.facebook.com/jimmy.neville.733">
+					<svg class="icons__facebook">
+						<use xlink:href="../img/sprite.svg#icon-facebook"></use>
+					</svg>
+				</a>
+				<a href="https://github.com/jneville0815">
+					<svg class="icons__github">
+						<use xlink:href="../img/sprite.svg#icon-github"></use>
+					</svg>
+				</a>
+			</div>
+		</header>
+		<main>
+			<div class="small-screen">
+				<div class="navbar">
+					<h1 style="float: left; transform: translateY(-2rem);">Jimmy Neville</h1>
+					<div class="dropdown">
+						<button class="dropbtn">Menu
+							<i class="fa fa-caret-down"></i>
+						</button>
+						<div class="dropdown-content">
+							<a href="../index.html#SH0">Home</a>
+							<a href="../index.html#SH1">About Me</a>
+							<a href="../index.html#SH2">Tutorials</a>
+							<a href="../index.html#SH3">Workout</a>
+							<a href="../index.html#SH4">Articles</a>
+							<a href="../index.html#SH5">Books</a>
+						</div>
+					</div> 
+				</div>
+			</div>
+			
+			<div class="main-section">
+				<div class="main-section__title">
+					C++ Intro, Variables
+				</div>
+				<div class="main-section__text">
+					<p><i>7/3/2019</i> - This tutorial explains variables and some other introductory topics. To follow along, you can either use a text editor/compiler of your choice, or you can use <a href="https://www.onlinegdb.com/online_c++_compiler" class="in-text-link">this website</a>.</p>
+
+					<p>In the code block below, you'll see the outline for a basic c++ file. The <span class="inline-code">#include &#60;iostream&#62;</span> statement is an include directive which is a library containing input and output definitions, and the <span class="inline-code">using namespace std;</span> statement causes the names in iostream to be used in the "standard" way. At this point, the details about these statements aren't important; just know that at the top of every basic c++ program, we'll need to include these lines of code. The <span class="inline-code">main()</span> function comes next, and the return statement at the end causes it to terminate and return a value. You'll learn more about functions in a later tutorial; for now, just think of the <span class="inline-code">main()</span> function as the area we'll be typing our code.</p> 
+
+					<pre>
+						<code>
+<p class="code-comment">// main.cpp</p>
+#include &#60;iostream&#62;
+using namespace std;
+
+int main() {
+	
+    return 0;
+}
+						</code>
+					</pre>
+
+					<h2>Comments</h2>
+
+                    <p>Comments are how we document our program. There are two types of comments you'll see in c++:</p>
+
+                    <pre>
+                        <code>                           
+<span class="code-comment">// this is a single line comment
+
+/* this is a
+multi line
+comment */</span>
+                        </code>
+                    </pre>
+
+                    <p>Comments are important, and learning to comment our code will help tremendously in the big picture. When commenting our code we want to clearly state what's happening, but not state something that our code has already stated. For example: <span class="inline-code">int students = 31; <span class="code-comment">//assign "31" to "students"</span></span> is a comment stating something that our code is already clearly stating. Throughout this tutorial we'll be using comments to help make our examples more clear, but we'll also see practical comments that will make our code more readable.</p>
+
+                    <h2>Naming Variables</h2>
+
+                    <p>C++ is a case sensitive language; Int is not the same thing as int, and built-in types will always start with a lowercase letter. Also, variable names must start with a letter or underscore, and the characters that follow must be letters, digits or underscores. When naming variables, the first letter will always be lowercase; it's bad practice for the first letter of a variable to be uppercase. We also don't use underscores at the start of variable names so that we can avoid collisions with names in other c++ libraries. Another way we avoid collisions is by avoiding variable names that other c++ libraries use; we call those variable names <a href="https://en.cppreference.com/w/cpp/keyword" class="in-text-link">reserved keywords</a>.</p>
+
+                    <p>There are two common naming conventions for variables: camelCaseNames and underscore_names. Determining which to use is up to you; just try to stay consistent throughout your code.</p>
+
+                    <pre>
+                        <code>
+<span class="code-comment">//GOOD VARIABLE NAMES:</span>
+int num; <span class="code-comment">//starts with a lowercase letter</span>
+int numOne; <span class="code-comment">//camelcase naming convention</span>
+int num_one <span class="code-comment">//underscore naming convention</span>
+
+<span class="code-comment">//BAD VARIABLE NAMES:</span>
+int Num; <span class="code-comment">//first letter capitalized</span>
+int _num; <span class="code-comment">//starts with underscore</span>
+int money$; <span class="code-comment">//contains a '$'</span>
+int public; <span class="code-comment">"public" is a reserved word</span>
+                        </code>
+                    </pre>
+
+                    <p>One other thing to note is that in c++ whitespace is ignored by the compiler. So, <span class="inline-code">int num;</span> and <span class="inline-code">int&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;num;</span> are the exact same statement.</p>
+
+                    <h2>Variable Declarations</h2>
+
+                    <p>Each line of code you see in the block above is called a "variable declaration," and every variable in a program must be declared before it can be used. It's also important to use meaningful names for variables. Suppose we're writing a program where we'll have several variables to keep track of a concession stand inventory:</p>
+
+                    <pre>
+                        <code>
+int d = 4; <span class="code-comment">//not good</span>
+int drinks = 4; <span class="code-comment">//better</span>
+                        </code>
+                    </pre>
+
+                    <p>We want to be explicit here, but not too explicit: <span class="inline-code">int numOfDrinksInInventory = 6;</span> would be a little over the top. The longest variable name we like to use is about 3 words long: <span class="inline-code">int numOfDrinks = 6;</span> is perfect. Clean and readable code is important, and we want to develop good programming habits as soon as possible.</p>
+
+                    <h2>Variable Initialization</h2>
+
+                    <p>You'll notice in our example above that we've started assigning values to variables in our declaration statements. This is also called "variable initialization," and we always want to initialize variables when we declare them. Think of a variable assignment as putting the value on the right into the variable on the left. Note that we can declare a variable and initialize the variable at the same time, or we can declare a variable and then assign it a value at a later point in the program:</p>
+
+                    <pre>
+                        <code>
+int candyBars; <span class="code-comment">//declaration</span>
+candyBars = 4; <span class="code-comment">//initialization</span>
+
+int bagsOfChips = 4; <span class="code-comment">//declaration & initialization</span>                          
+                        </code>
+                    </pre>
+
+                    <p>You could reassign the value of candyBars or bagsOfChips at a later point in the program, but you would not have to declare the variable again. So you could just say <span class="inline-code">candyBars = 8;</span> or <span class="inline-code">bagsOfChips = 10;</span></p>
+
+					<h2>Variable Types</h2>
+
+                    <p>There are five main variable types in c++ that we'll cover in this tutorial: integers, doubles, characters, booleans and strings.</p>
+
+                    <h2>Integers</h2>
+
+                    <p> An integer is a whole number, and it usually takes up 4 bytes of memory. Well, the exact amount of memory each type takes up is dependent on the operating system: on a 32 bit machine ints take up 4 bytes, and on a 64 bit machine they take up 8 bytes. An int can store any value between -2,147,483,648 and 2,147,483,648. If we need a number larger than 2,147,483,648 we can use a type called "long int," and if we're using only positive numbers we can use "unsigned int" to get a value between 0 and 4,294,967,296. For most basic programs we don't have to worry about unsigned ints or long ints, but I mention them so that you're familiar with the terminology. We can also use mathematical operations on integers:</p>
+
+                    <pre>
+                        <code>
+int num1 = 1 + 2; <span class="code-comment">//num1 becomes 3</span>
+int num2 = 4 - 2; <span class="code-comment">//num2 becomes 2</span>
+int num3 = num1 - num2; <span class="code-comment">//num3 becomes 1</span>
+int num4 = 5 * 3; <span class="code-comment">//num4 becomes 15</span>
+int num5 = 6 / 3; <span class="code-comment">//num5 becomes 2</span>
+int num6 = 6 / 4; <span class="code-comment">//num6 becomes 1</span>
+                        </code>
+                    </pre>
+
+                    <p>Remember <a href="https://www.chilimath.com/lessons/introductory-algebra/pemdas-rule/" class="in-text-link">PEMDAS</a>  from math class? C++ follows those same rules. We can put parenthesis around the part of the expression that we want evaluated first:</p>
+
+                    <pre>
+                        <code>
+int num7 = 1 + 2 * 4; <span class="code-comment">//num6 becomes 9</span>
+int num8 = (1 + 2) * 4; <span class="code-comment">//num7 becomes 12</span>
+                        </code>
+                    </pre>
+
+                    <p>You may be looking at the <span class="inline-code">num6</span> assignment above and thinking there's a mistake: <span class="inline-code">6 / 4</span> is not 1! When using int division, the fraction gets cut off, so it will always round down to the nearest whole number. To calculate what's left over when we divide 6 by 4, we'll use the modulus (%) operator:</p>
+
+                    <pre>
+                    	<code>
+int num9 = 6 % 4; <span class="code-comment">//num9 becomes 2</span>
+int num10 = 11 & 4; <span class="code-comment">//num10 becomes 3</span>
+                    	</code>
+                    </pre>
+
+                    <p>The modulus operator is useful in many circumstances. We'll use it when generating random numbers, and we'll also use it to find out if a number is a factor of another number: <span class="inline-code code-comment">//if x % y == 0 then y is a factor of x</span></p>
+
+                    <h2>Doubles</h2>
+
+                    <p>Doubles are similar to integers, but they also contain a decimal point. Doubles have at least 14 digits of accuracy and take up 8 bytes of memory on a 32 bit machine. A double can store values between 10<sup>-308</sup> and 10<sup>308</sup>. Something to remember is that if an expression contains a double, the result will be a double: <span class="inline-code">9 * 3.0</span> will equate to <span class="inline-code">27.0</span>. Also note that division works properly with doubles, and if you store an int as a double it will be converted to a double:</p>
+
+                    <pre>
+                    	<code>
+double dub1 = 9; <span class="code-comment">//gets stored as 9.0</span>
+double dub2 = 6.7 / 2.1; <span class="code-comment">//dub2 becomes 3.19048</span>
+                    	</code>
+                    </pre>
+
+                    <h2>Characters</h2>
+
+                    <p>Characters take up 1 byte in memory and are assigned using single quotation marks: <span class="inline-code">char letter1 = 'A';</span>. Take a look at the <a href="http://www.asciitable.com/" class="in-text-link">ASCII Table</a> to see what values you can store in a char, and also note that the value of a char is acutally just a small integer. If you look at the ASCII Table you can see that the letter 'A' is acutally just the number 65. So if you type: <span class="inline-code">char letter1 = 65;</span> an 'A' will be stored in the variable letter1. You can also change the values of characters using expressions:</p>
+
+                    <pre>
+                    	<code>
+char letter2 = 'B'; <span class="code-comment">//also the number 66</span>
+char letter3 = letter2 + 1; <span class="code-comment">//letter3 becomes 'C' or 67</span>
+char letter4 = letter2 + 32; <span class="code-comment">//letter3 becomes 'b' or 98</span>
+                    	</code>
+                    </pre>
+
+                    <h2>Booleans</h2>
+
+                    <p>Booleans also take up 1 byte in memory and are true/false values. The default numeric value for false is 0, and the default value for true is 1: <span class="inline-code">bool b1 = true;</span> is the same as <span class="inline-code">bool b1 = 1;</span>. We can assign a bool to any int or double, and any value that's not 0 will be true. Both <span class="inline-code">bool b2 = 99.3;</span> and <span class="inline-code">bool b2 = 43;</span> would cause b2 to be true. It's also possbile to use bools in expressions:</p>
+
+                    <pre>
+                    	<code>
+int num11 = true + false + 8; <span class="code-comment">//num11 becomes 9</span>
+int num12 = true + true + true; <span class="code-comment">//num12 becomes 3</span>
+                    	</code>
+                    </pre>
+
+                    <h2>Strings</h2>
+
+                    <p>Strings are the last data type we'll cover in this tutorial. In order to use strings, you must <span class="inline-code">#include &#60;string&#62;</span> at the top of the file. Strings don't have a fixed size; the size of each string depends on the length of the string: <span class="inline-code">string name1 = "Bob";</span> would take up less space in memory than <span class="inline-code">string name2 = "Bobby Michael Peterson";</span>. Note that strings are assigned using double quotation marks, and they may contain spaces. We can also use the <span class="inline-code">+</span> operator to concatenate strings:</p>
+
+                    <pre>
+                    	<code>
+string firstName = "Jimmy "; <span class="code-comment">//note the space at the end</span>
+string lastName = "Neville";
+string fullName = firstName + lastName; <span class="code-comment">//fullName becomes "Jimmy Neville"</span> 
+                    	</code>
+                    </pre>
+                    
+                    <h2>Safe/Unsafe Conversions</h2>
+
+                    <p>To to do a safe type conversion, there's important rules we need to follow. Unsafe conversions usually won't give an error or warning, but can cause major bugs in our program. Safe conversions are: bool to char, bool to int, bool to double, char to int, char to double, and int to double. Unsafe conversions are: double to int, double to char, double to bool, int to char, int to bool, and char to bool. If you look closely at the unsafe conversions, you'll see that the type on the left is larger than the type on the right; a 4 byte int will not fit into a 1 byte bool:</p>
+
+                    <pre>
+                        <code>
+bool b1 = true;
+int i1 = 9;
+
+b1 = i1; <span class="code-comment">//unsafe...int is larger than bool</span>
+i1 = b1; <span class="code-comment">//safe...bool is smaller than int</span>
+                        </code>
+                    </pre>
+
+                    <h2>Constants</h2>
+
+                    <p>A constant is a value that is not a variable; i.e. the value can't be changed. To initialize a contant variable it's as simple as adding <span class="inline-code">const</span> before the type: <span class="inline-code">const int x = 5; <span class="code-comment">//x can never be changed</span></span>. If we try to reassign <span class="inline-code">x</span>, we get an error. You can make any type a constant:</p>
+
+                    <pre>
+                        <code>
+const int a = 5;
+const double b = 6.0;
+const char c = 'C';
+const bool d = true;
+const string e = "Hello World";
+                        </code>
+                    </pre>
+
+                    <h2>Conclusion</h2>
+
+                    <p>You have reached the end of the first tutorial! We'll learn a lot more about the data types we've covered in this tutorial in the tutorials to follow as we explore new topics.</p>
+
+                    <hr>
+                    <br>
+
+					<div
+						class="just-comments"
+						data-apikey="ac050acf-21a4-4141-bb36-c7997f35c2d8"
+						data-allowguests="true">
+					</div>
+					<script async src="https://just-comments.com/w.js"></script>
+
+					<p><a href="../index.html" class="in-text-link top">Back to homepage</a></p>
+				</div>
+			</div>
+			<div class="footer">
+				Contact Me: Jneville0815@yahoo.com
+			</div>
+		</main>
+	</body>
+</html>

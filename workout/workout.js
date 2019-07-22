@@ -48,3 +48,29 @@ function makeTables() {
 		document.getElementById("uf").innerHTML = 5;
 	}
 };
+
+// -----------------------------------------------------------------------------------
+
+Date.prototype.getWeekNumber = function(){
+  var d = new Date(Date.UTC(this.getFullYear(), this.getMonth(), this.getDate()));
+  var dayNum = d.getUTCDay() || 7;
+  d.setUTCDate(d.getUTCDate() + 4 - dayNum);
+  var yearStart = new Date(Date.UTC(d.getUTCFullYear(),0,1));
+  return Math.ceil((((d - yearStart) / 86400000) + 1)/7)
+};
+
+let inaccurateWeek = new Date().getWeekNumber() % 4 + 1;
+
+if(inaccurateWeek === 3){
+	inaccurateWeek = 1;
+} else if(inaccurateWeek === 4){
+	inaccurateWeek = 2;
+} else if(inaccurateWeek === 1){
+	inaccurateWeek = 3;
+} else if(inaccurateWeek === 2){
+	inaccurateWeek = 4;
+}
+
+$("#cur-week").text(inaccurateWeek);
+
+// -----------------------------------------------------------------------------------

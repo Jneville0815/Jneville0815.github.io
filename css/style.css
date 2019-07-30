@@ -57,7 +57,9 @@ p {
 
 .top {
   display: block;
-  text-align: center; }
+  text-align: center;
+  width: auto;
+  margin: 0 auto; }
 
 .code-comment {
   margin-top: 0;

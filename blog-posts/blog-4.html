@@ -58,7 +58,7 @@
 				<div class="main-section__text">
 					<p><i>7/3/2019</i> - This tutorial explains variables and some other introductory topics. To follow along, you can either use a text editor/compiler of your choice, or you can use <a href="https://www.onlinegdb.com/online_c++_compiler" class="in-text-link">this website</a>.</p>
 
-					<p>In the code block below, you'll see the outline for a basic c++ file. The <span class="inline-code">#include &#60;iostream&#62;</span> statement is an include directive which is a library containing input and output definitions, and the <span class="inline-code">using namespace std;</span> statement causes the names in iostream to be used in the "standard" way. At this point, the details about these statements aren't important; just know that at the top of every basic c++ program, we'll need to include these lines of code. The <span class="inline-code">main()</span> function comes next, and the return statement at the end causes it to terminate and return a value. You'll learn more about functions in a later tutorial; for now, just think of the <span class="inline-code">main()</span> function as the area we'll be typing our code.</p> 
+					<p>In the code block below, you'll see the outline for a basic c++ file. The <span class="inline-code">#include &#60;iostream&#62;</span> statement is an include directive which is a library containing input and output definitions, and the <span class="inline-code">using namespace std;</span> statement causes the names in iostream to be used in a standard way. At this point, the details about these statements aren't important; just know that at the top of every basic c++ program we'll need to include these lines of code. The <span class="inline-code">main()</span> function comes next, and the return statement at the end causes the function to terminate and return a value. You'll learn more about functions in a later tutorial; for now, just think of the <span class="inline-code">main()</span> function as the area we'll be typing our code.</p> 
 
 					<pre>
 						<code>
@@ -75,7 +75,7 @@ int main() {
 
 					<h2>Comments</h2>
 
-                    <p>Comments are how we document our program. There are two types of comments you'll see in c++:</p>
+                    <p>Comments are how we document our program. There are two types of comments you'll use in c++:</p>
 
                     <pre>
                         <code>                           
@@ -87,13 +87,13 @@ comment */</span>
                         </code>
                     </pre>
 
-                    <p>Comments are important, and learning to comment our code will help tremendously in the big picture. When commenting our code we want to clearly state what's happening, but not state something that our code has already stated. For example: <span class="inline-code">int students = 31; <span class="code-comment">//assign "31" to "students"</span></span> is a comment stating something that our code is already clearly stating. Throughout this tutorial we'll be using comments to help make our examples more clear, but we'll also see practical comments that will make our code more readable.</p>
+                    <p>When commenting our code we want to clearly state what's happening, but not state something that our code has already stated. For example: <span class="inline-code">int students = 31; <span class="code-comment">//assign "31" to "students"</span></span> is a comment stating something that our code is already clearly stating. Throughout this tutorial we'll mainly be using comments to help explain our examples.</p>
 
                     <h2>Naming Variables</h2>
 
-                    <p>C++ is a case sensitive language; Int is not the same thing as int, and built-in types will always start with a lowercase letter. Also, variable names must start with a letter or underscore, and the characters that follow must be letters, digits or underscores. When naming variables, the first letter will always be lowercase; it's bad practice for the first letter of a variable to be uppercase. We also don't use underscores at the start of variable names so that we can avoid collisions with names in other c++ libraries. Another way we avoid collisions is by avoiding variable names that other c++ libraries use; we call those variable names <a href="https://en.cppreference.com/w/cpp/keyword" class="in-text-link">reserved keywords</a>.</p>
+                    <p>C++ is a case sensitive language; Int is not the same thing as int, and built-in types will always start with a lowercase letter. Also, variable names must start with a letter or underscore, and the characters that follow must be letters, digits or underscores. When naming variables, the first letter will always be lowercase; variables with an uppercase first letter are mainly used for classes, and we will talk about classes in a later tutorial. We also don't use underscores at the start of a variable name so that we can avoid collisions with names in other c++ libraries. Another way we avoid collisions is by avoiding variable names that other c++ libraries use; we call those variable names <a href="https://en.cppreference.com/w/cpp/keyword" class="in-text-link">reserved keywords</a>.</p>
 
-                    <p>There are two common naming conventions for variables: camelCaseNames and underscore_names. Determining which to use is up to you; just try to stay consistent throughout your code.</p>
+                    <p>There are two common naming conventions for variables: camelCaseNames and underscore_names. We can use either, but we pick one and stay consistent throughout our code. In this tutorial we'll be using camelCaseNames.</p>
 
                     <pre>
                         <code>
@@ -123,11 +123,11 @@ int drinks = 4; <span class="code-comment">//better</span>
                         </code>
                     </pre>
 
-                    <p>We want to be explicit here, but not too explicit: <span class="inline-code">int numOfDrinksInInventory = 6;</span> would be a little over the top. The longest variable name we like to use is about 3 words long: <span class="inline-code">int numOfDrinks = 6;</span> is perfect. Clean and readable code is important, and we want to develop good programming habits as soon as possible.</p>
+                    <p>We want to be explicit here, but not too explicit: <span class="inline-code">int numOfDrinksInInventory = 6;</span> would be a little over the top. The longest variable name we like to use is about 3 words long: <span class="inline-code">int numOfDrinks = 6;</span> is perfect.</p>
 
                     <h2>Variable Initialization</h2>
 
-                    <p>You'll notice in our example above that we've started assigning values to variables in our declaration statements. This is also called "variable initialization," and we always want to initialize variables when we declare them. Think of a variable assignment as putting the value on the right into the variable on the left. Note that we can declare a variable and initialize the variable at the same time, or we can declare a variable and then assign it a value at a later point in the program:</p>
+                    <p>You'll notice in our example above that we've started assigning values to variables in our statements. This is called "variable initialization," and it's good practice to initialize variables when we declare them. Think of a variable assignment as putting the value on the right into the variable on the left. Note that we can declare a variable and initialize the variable at the same time, or we can declare a variable and then assign it a value at a later point in the program:</p>
 
                     <pre>
                         <code>
@@ -138,7 +138,7 @@ int bagsOfChips = 4; <span class="code-comment">//declaration & initialization</
                         </code>
                     </pre>
 
-                    <p>You could reassign the value of candyBars or bagsOfChips at a later point in the program, but you would not have to declare the variable again. So you could just say <span class="inline-code">candyBars = 8;</span> or <span class="inline-code">bagsOfChips = 10;</span></p>
+                    <p>You could reassign the value of candyBars or bagsOfChips at a later point in the program, but you would not have to declare the variable again; you could just say <span class="inline-code">candyBars = 8;</span> or <span class="inline-code">bagsOfChips = 10;</span></p>
 
 					<h2>Variable Types</h2>
 
@@ -146,7 +146,7 @@ int bagsOfChips = 4; <span class="code-comment">//declaration & initialization</
 
                     <h2>Integers</h2>
 
-                    <p> An integer is a whole number, and it usually takes up 4 bytes of memory. Well, the exact amount of memory each type takes up is dependent on the operating system: on a 32 bit machine ints take up 4 bytes, and on a 64 bit machine they take up 8 bytes. An int can store any value between -2,147,483,648 and 2,147,483,648. If we need a number larger than 2,147,483,648 we can use a type called "long int," and if we're using only positive numbers we can use "unsigned int" to get a value between 0 and 4,294,967,296. For most basic programs we don't have to worry about unsigned ints or long ints, but I mention them so that you're familiar with the terminology. We can also use mathematical operations on integers:</p>
+                    <p> An integer is a whole number, and it usually takes up 4 bytes of memory. Well, the exact amount of memory each type takes up is dependent on the operating system. On a 32 bit machine ints take up 4 bytes, and on a 64 bit machine they take up 8 bytes. An int can store any value between -2,147,483,648 and 2,147,483,648. If we need a number larger than 2,147,483,648 we can use a type called "long int," and if we're using only positive numbers we can use "unsigned int" to get a value between 0 and 4,294,967,296. For most basic programs we don't have to worry about unsigned ints or long ints, but I mention them so that you're familiar with the terminology. We can also use mathematical operations on integers:</p>
 
                     <pre>
                         <code>
@@ -168,7 +168,7 @@ int num8 = (1 + 2) * 4; <span class="code-comment">//num7 becomes 12</span>
                         </code>
                     </pre>
 
-                    <p>You may be looking at the <span class="inline-code">num6</span> assignment above and thinking there's a mistake: <span class="inline-code">6 / 4</span> is not 1! When using int division, the fraction gets cut off, so it will always round down to the nearest whole number. To calculate what's left over when we divide 6 by 4, we'll use the modulus (%) operator:</p>
+                    <p>You may be looking at the <span class="inline-code">num6</span> assignment above and thinking that there's a mistake: <span class="inline-code">6 / 4</span> is not 1! When using int division, the fraction gets cut off, so it will always round down to the nearest whole number. To calculate what's left over when we divide 6 by 4, we use the modulus (%) operator:</p>
 
                     <pre>
                     	<code>
@@ -181,7 +181,7 @@ int num10 = 11 & 4; <span class="code-comment">//num10 becomes 3</span>
 
                     <h2>Doubles</h2>
 
-                    <p>Doubles are similar to integers, but they also contain a decimal point. Doubles have at least 14 digits of accuracy and take up 8 bytes of memory on a 32 bit machine. A double can store values between 10<sup>-308</sup> and 10<sup>308</sup>. Something to remember is that if an expression contains a double, the result will be a double: <span class="inline-code">9 * 3.0</span> will equate to <span class="inline-code">27.0</span>. Also note that division works properly with doubles, and if you store an int as a double it will be converted to a double:</p>
+                    <p>Doubles are similar to integers, but they also have a decimal point. Doubles have at least 14 digits of accuracy and take up 8 bytes of memory on a 32 bit machine. A double can store values between 10<sup>-308</sup> and 10<sup>308</sup>. Something to remember is that if an expression contains a double, the result will be a double: <span class="inline-code">9 * 3.0</span> will equate to <span class="inline-code">27.0</span>. Also note that division works properly with doubles, and if you store an int as a double it will be converted to a double:</p>
 
                     <pre>
                     	<code>
@@ -192,7 +192,7 @@ double dub2 = 6.7 / 2.1; <span class="code-comment">//dub2 becomes 3.19048</span
 
                     <h2>Characters</h2>
 
-                    <p>Characters take up 1 byte in memory and are assigned using single quotation marks: <span class="inline-code">char letter1 = 'A';</span>. Take a look at the <a href="http://www.asciitable.com/" class="in-text-link">ASCII Table</a> to see what values you can store in a char, and also note that the value of a char is acutally just a small integer. If you look at the ASCII Table you can see that the letter 'A' is acutally just the number 65. So if you type: <span class="inline-code">char letter1 = 65;</span> an 'A' will be stored in the variable letter1. You can also change the values of characters using expressions:</p>
+                    <p>Characters take up 1 byte in memory and are assigned using single quotation marks: <span class="inline-code">char letter1 = 'A';</span>. Take a look at the <a href="http://www.asciitable.com/" class="in-text-link">ASCII Table</a> to see what values you can store in a char, and also note that the value of a char is acutally just a small integer. If you look at the ASCII Table you can see that the letter 'A' is acutally just the number 65. So if you type: <span class="inline-code">char letter1 = 65;</span> an 'A' will be stored in <span class="inline-code">letter1</span>. You can also change the values of characters using expressions:</p>
 
                     <pre>
                     	<code>
@@ -215,7 +215,7 @@ int num12 = true + true + true; <span class="code-comment">//num12 becomes 3</sp
 
                     <h2>Strings</h2>
 
-                    <p>Strings are the last data type we'll cover in this tutorial. In order to use strings, you must <span class="inline-code">#include &#60;string&#62;</span> at the top of the file. Strings don't have a fixed size; the size of each string depends on the length of the string: <span class="inline-code">string name1 = "Bob";</span> would take up less space in memory than <span class="inline-code">string name2 = "Bobby Michael Peterson";</span>. Note that strings are assigned using double quotation marks, and they may contain spaces. We can also use the <span class="inline-code">+</span> operator to concatenate strings:</p>
+                    <p>Strings are the last data type we'll cover in this tutorial. In order to use strings, we must declare <span class="inline-code">#include &#60;string&#62;</span> at the top of the file. Strings don't have a fixed size; the size of each string depends on the length of the string: <span class="inline-code">string name1 = "Bob";</span> would take up less space in memory than <span class="inline-code">string name2 = "Bobby Michael Peterson";</span>. Note that strings are assigned using double quotation marks, and they may contain spaces. We can also use the <span class="inline-code">+</span> operator to concatenate strings:</p>
 
                     <pre>
                     	<code>
@@ -227,7 +227,7 @@ string fullName = firstName + lastName; <span class="code-comment">//fullName be
                     
                     <h2>Safe/Unsafe Conversions</h2>
 
-                    <p>To to do a safe type conversion, there's important rules we need to follow. Unsafe conversions usually won't give an error or warning, but can cause major bugs in our program. Safe conversions are: bool to char, bool to int, bool to double, char to int, char to double, and int to double. Unsafe conversions are: double to int, double to char, double to bool, int to char, int to bool, and char to bool. If you look closely at the unsafe conversions, you'll see that the type on the left is larger than the type on the right; a 4 byte int will not fit into a 1 byte bool:</p>
+                    <p>To to do a safe type conversion, there's important rules to follow. Unsafe conversions usually won't give an error or warning, but can cause major bugs in our program. Safe conversions are: bool to char, bool to int, bool to double, char to int, char to double, and int to double. Unsafe conversions are: double to int, double to char, double to bool, int to char, int to bool, and char to bool. If you look closely at the unsafe conversions, you'll see that the type on the left is larger than the type on the right; a 4 byte int will not fit into a 1 byte bool:</p>
 
                     <pre>
                         <code>
@@ -241,7 +241,7 @@ i1 = b1; <span class="code-comment">//safe...bool is smaller than int</span>
 
                     <h2>Constants</h2>
 
-                    <p>A constant is a value that is not a variable; i.e. the value can't be changed. To initialize a contant variable it's as simple as adding <span class="inline-code">const</span> before the type: <span class="inline-code">const int x = 5; <span class="code-comment">//x can never be changed</span></span>. If we try to reassign <span class="inline-code">x</span>, we get an error. You can make any type a constant:</p>
+                    <p>A constant is a value that can't be changed. To initialize a contant it's as simple as adding <span class="inline-code">const</span> before the type: <span class="inline-code">const int x = 5; <span class="code-comment">//x can never be changed</span></span>. If we try to reassign <span class="inline-code">x</span> at any point in our program we'll get an error. We can make any type a constant:</p>
 
                     <pre>
                         <code>
@@ -253,9 +253,131 @@ const string e = "Hello World";
                         </code>
                     </pre>
 
+                    <h2>Basic Input and Output</h2>
+
+                    <p>We use <span class="inline-code">cin</span> for basic input, and we use <span class="inline-code">cout</span> for basic output:</p>
+
+                    <pre>
+                        <code>
+<p class="code-comment">// main.cpp</p>
+#include &#60;iostream&#62;
+using namespace std;
+
+int main() {
+    int num = 0;
+
+    cout &#60;&#60; "Enter a number between 1 and 10: ";
+    cin &#62;&#62; num;
+
+    cout &#60;&#60; "The number you entered is: " &#60;&#60; num &#60;&#60; endl;
+    
+    return 0;
+}
+                        </code>
+                    </pre>
+
+                    <p>We use the insertion operator (<<) for <span class="inline-code">cout</span>, and the extraction operator (>>) for <span class="inline-code">cin</span>. To help remember which operator is for <span class="inline-code">cin</span> and which operator is for <span class="inline-code">cout</span>, we can think of the operators as arrows. The insertion operation is pointing "out" of the page (cout), and the extraction operator is pointing "in" to the page (cin). Note that <span class="inline-code">cin</span> is pronounced "see-in".</p>
+
+                    <p>There are two ways you can insert a new line at the end of a <span class="inline-code">cout</span> statement. One way is with <span class="inline-code">endl;</span> like we used in the example above, and another way is by using <span class="inline-code">"\n"</span>:</p>
+
+                    <pre>
+                        <code>
+<p class="code-comment">// main.cpp</p>
+#include &#60;iostream&#62;
+using namespace std;
+
+int main() {
+    int num = 0;
+
+    cout &#60;&#60; "Hello!\n";
+    cout &#60;&#60; "C++ is a" &#60;&#60; endl;
+    cout &#60;&#60; "cool language!" &#60;&#60; "\n";
+    
+    return 0;
+}
+                        </code>
+                    </pre>
+
+                    <p>You can see that <span class="inline-code">"\n"</span> must be used in quotation marks. The difference in the two is that <span class="inline-code">endl;</span> flushes the output buffer, and <span class="inline-code">"\n"</span> does not flush the output buffer.</p>
+
+                    <p>Note that <span class="inline-code">cin</span> will ignore whitespace before anything you type and will terminate when it reaches whitespace:</p>
+
+                    <pre>
+                        <code>
+<p class="code-comment">// main.cpp</p>
+#include &#60;iostream&#62;
+#include &#60;string&#62;
+using namespace std;
+
+int main() {
+    string name;
+
+    cout &#60;&#60; "Enter your first name: ";
+    cin &#62;&#62; name; <span class="code-comment">//entering "Jimmy"</span>
+
+    cout &#60;&#60; "You entered " &#60;&#60; name &#60;&#60; endl;
+    <span class="code-comment">//output will be: "You entered Jimmy"</span>
+    
+    return 0;
+}
+                        </code>
+                    </pre>
+
+                    <p>You could also enter <span class="inline-code">"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Jimmy"</span> into the <span class="inline-code">cin</span> statement and the results would be the same because the preceding whitespace is ignored. Let's look at another example:</p>
+
+                    <pre>
+                        <code>
+<p class="code-comment">// main.cpp</p>
+#include &#60;iostream&#62;
+#include &#60;string&#62;
+using namespace std;
+
+int main() {
+    string name2;
+
+    cout &#60;&#60; "Enter your full name: ";
+    cin &#62;&#62; name2; <span class="code-comment">//entering "Jimmy Neville"</span>
+
+    cout &#60;&#60; "You entered " &#60;&#60; name2 &#60;&#60; endl;
+    <span class="code-comment">//output will still be: "You entered Jimmy"</span>
+    
+    return 0;
+}
+                        </code>
+                    </pre>
+
+                    <p>The input stream will only read the first name because it terminates at whitespace. If we want to read the full name we need to use <span class="inline-code">getline()</span>:</p>
+
+                    <pre>
+                        <code>
+<p class="code-comment">// main.cpp</p>
+#include &#60;iostream&#62;
+#include &#60;string&#62;
+using namespace std;
+
+int main() {
+    string name2;
+
+    cout &#60;&#60; "Enter your full name: ";
+    getline(cin, name2); <span class="code-comment">//entering "Jimmy Neville"</span>
+
+    cout &#60;&#60; "You entered " &#60;&#60; name2 &#60;&#60; endl;
+    <span class="code-comment">//output will now be: "You entered Jimmy Neville"</span>
+    
+    return 0;
+}
+                        </code>
+                    </pre>
+
                     <h2>Conclusion</h2>
 
                     <p>You have reached the end of the first tutorial! We'll learn a lot more about the data types we've covered in this tutorial in the tutorials to follow as we explore new topics.</p>
+
+                    <h2>References:</h2>
+
+                    <p><a class="in-text-link" href="www.geeksforgeeks.com">GeeksforGeeks.com</a></p>
+                    <p><a href="https://www.amazon.com/Programming-Principles-Practice-Using-C/dp/0321543726" class="in-text-link">Programming Principles and Practices Using C++ by Bjarne Stroustrup</a></p>
+                    <p><a class="in-text-link" href="https://www.amazon.com/Problem-Solving-9th-Walter-Savitch/dp/0133591743">Problem Solving With C++ 9th Edition by Walter Savitch</a></p>
 
                     <hr>
                     <br>
@@ -267,7 +389,7 @@ const string e = "Hello World";
 					</div>
 					<script async src="https://just-comments.com/w.js"></script>
 
-					<p><a href="../index.html" class="in-text-link top">Back to homepage</a></p>
+					<a href="../index.html" class="in-text-link top">Back to homepage</a>
 				</div>
 			</div>
 			<div class="footer">

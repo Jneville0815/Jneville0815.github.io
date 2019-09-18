@@ -62,13 +62,13 @@ Date.prototype.getWeekNumber = function(){
 let inaccurateWeek = new Date().getWeekNumber() % 4 + 1;
 
 if(inaccurateWeek === 3){
-	inaccurateWeek = 4;
-} else if(inaccurateWeek === 4){
 	inaccurateWeek = 1;
-} else if(inaccurateWeek === 1){
+} else if(inaccurateWeek === 4){
 	inaccurateWeek = 2;
-} else if(inaccurateWeek === 2){
+} else if(inaccurateWeek === 1){
 	inaccurateWeek = 3;
+} else if(inaccurateWeek === 2){
+	inaccurateWeek = 4;
 }
 
 $("#cur-week").text(inaccurateWeek);

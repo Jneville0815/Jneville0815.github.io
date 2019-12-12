@@ -65,17 +65,17 @@ main {
 		}
 	}
 
-	&-2{
-		width: 40rem;
-		height: 30rem;
-		align-self: center;
+	&-2 {
+		width: 30rem;
+		height: 40rem;
 		box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
 		border-radius: 4px;
+		align-self: center;
+		margin-bottom: 2rem;
 
 		@media screen and (max-width: 1100px) {
-			margin-top: 2rem;
-			width: 30rem;
-			height: 22.5rem;
+			width: 22.5rem;
+			height: 30rem;
 		}
 	}
 

@@ -56,11 +56,11 @@
                     Basic Python Blockchain
                 </div>
                 <div class="main-section__text">
-                    <p><i>6/19/2019</i> - The idea to create this tutorial comes from another <a href="https://github.com/Savjee/SavjeeCoin" class="in-text-link">tutorial</a> written in javascript. To follow along, you can either use this <a href="https://repl.it/languages/python3" class="in-text-link">online editor</a>, or you can use an editor of your choice. You can also look at the complete <a href="https://github.com/Jneville0815/python-blockchain" class="in-text-link">source code</a> if you get stuck at any point.</p>
+                    <p><i>6/19/2019</i> - The idea to create this tutorial comes from another <a href="https://github.com/Savjee/SavjeeCoin" class="in-text-link">tutorial</a> I read written in javascript. To follow along, you can either use this <a href="https://repl.it/languages/python3" class="in-text-link">online editor</a>, or you can use an editor of your choice. You can also look at the complete <a href="https://github.com/Jneville0815/python-blockchain" class="in-text-link">source code</a> if you get stuck at any point.</p>
 
-                    <p>In order to comprehend this tutorial, it's important that you have a basic understanding of the following python features: for loops, classes, while loops, if/else statements, f-strings and the <span class="inline-code">__str__()</span> method. To read up on these features before completing this tutorial see <a href="https://docs.python.org/3/" class="in-text-link">the python documentation</a>. If you want something more beginner friendly, try this: <a href="https://www.w3schools.com/python/" class="in-text-link">w3schools tutorial</a>.</p>
+                    <p>To understand this tutorial, you should be able to use the following python features: for loops, classes, while loops, if/else statements, f-strings and the <span class="inline-code">__str__()</span> method. To read up on these features before completing this tutorial see <a href="https://docs.python.org/3/" class="in-text-link">the python documentation</a>. If you want something more beginner friendly, try: <a href="https://www.w3schools.com/python/" class="in-text-link">w3schools tutorial</a>.</p>
 
-                    <p>Writing this program will help increase your knowledge of the core python features, and it will also help you gain a better understanding of how a blockchain works. At a basic level, a blockchain is a chain of transactions (blocks) with each block containing a few different properties.</p>
+                    <p>This tutorial will help you increase your knowledge of the core python features, and it will also help you gain a better understanding of how a blockchain works. At a basic level, a blockchain is a chain of transactions (blocks) with each block containing a few different properties.</p>
 
                     <p>We'll start by creating a <span class="inline-code">main.py</span> file and adding a few imports at the top of the file:</p>
 
@@ -85,7 +85,7 @@ stamp = datetime.datetime.fromtimestamp(ts).strftime('%Y-%m-%d %H:%M:%S')
                         </code>
                     </pre>
 
-                    <p>Here we're using the datetime/time library to create a timestamp that can be displayed as a string. If you <span class="inline-code">print(stamp)</span> your output will be a string with the current date and time. Right now that is "2019-06-19 14:59:56" for me. The format doesn't matter for this tutorial, but if you would like to read up on other directives that can be used for formatting, you can look at the<a href="https://docs.python.org/2/library/datetime.html#strftime-and-strptime-behavior" class="in-text-link"> python documentation</a>.</p>
+                    <p>Here we're using the datetime/time library to create a timestamp that can be displayed as a string. If you <span class="inline-code">print(stamp)</span> your output will be a string with the current date and time. Right now that is "2019-06-19 14:59:56" for me. The format doesn't matter for this tutorial, but if you want to read up on other directives that can be used for formatting, you can look at the<a href="https://docs.python.org/2/library/datetime.html#strftime-and-strptime-behavior" class="in-text-link"> python documentation</a>.</p>
 
                     <p>Now we'll begin creating our Block class:</p>
 
@@ -123,7 +123,7 @@ class Block:
                         </code>
                     </pre>
 
-                    <p>Here we're using the SHA256 method from the hashlib library that we imported at the top of the file. In order to get a unique hash code for each block, we're going to add all of the properties together and pass it into the function. The properties being passed into the function need to be converted to bytes, so we use the <span class="inline-code">bytes()</span> method to do so. When we pass an integer into the bytes method we only have to pass the integer into the argument. When passing a string into the same method we have to pass two arguments, the string and the encoding of the string. This function will generate a 256-bit (32-byte) hash code.</p>
+                    <p>Here we're using the SHA256 method from the hashlib library that we imported at the top of the file. In order to get a unique hash code for each block, we're going to add all of the properties together and pass it into the function. The properties being passed into the function need to be converted to bytes, so we use the <span class="inline-code">bytes()</span> method to do so. When we pass an integer into the bytes method we only have to pass the integer as the argument. When passing a string into the same method we have to pass two arguments: the string and the encoding of the string. This function will generate a 256-bit (32-byte) hash code.</p>
 
                     <p>Example: When you pass "jimmy" into the function, the unique hash code is: "930a68a51a2db950f58fd3b0b5f1d76f56afaa16e12a418d71ca6c25f2390424"</p>
 
@@ -257,14 +257,7 @@ if __name__ == "__main__":
                     <p>Thanks for checking out the tutorial, and I hope you find it useful! Click <a href="https://github.com/Jneville0815/python-blockchain" class="in-text-link">here</a> to see the full source code.</p>
 
                     <hr>
-                    <br>
-
-                    <div
-                        class="just-comments"
-                        data-apikey="ac050acf-21a4-4141-bb36-c7997f35c2d8"
-                        data-allowguests="true">
-                    </div>
-                    <script async src="https://just-comments.com/w.js"></script>    
+                    <br>   
 
                     <a href="../index.html" class="in-text-link top">Back to homepage</a>
                 </div>

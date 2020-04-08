@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../css/style.css">
+        <link href="https://fonts.googleapis.com/css?family=Noto+Serif" rel="stylesheet">
+        <link rel="shortcut icon" type="image/png" href="../img/favicon.ico">
+
+     <!--    mathjax.org - using latex in the html -->
+		<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+		<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        
+        <title>Linear Regression</title>
+	</head>
+	<body>
+		<header class="header">
+			<h1 class="header__name">Jimmy Neville</h1>
+			<a href="../index.html" class="header__link">Home</a>
+			<a href="../index.html#SH1" class="header__link">About Me</a>
+			<a href="../index.html#SH2" class="header__link">Tutorials</a>
+			<a href="../index.html#SH3" class="header__link">Workout</a>
+			<a href="../index.html#SH4" class="header__link">Articles</a>
+			<a href="../index.html#SH5" class="header__link">Books</a>
+			<div class="icons">
+				<a href="https://www.facebook.com/jimmy.neville.733">
+					<svg class="icons__facebook">
+						<use xlink:href="../img/sprite.svg#icon-facebook"></use>
+					</svg>
+				</a>
+				<a href="https://github.com/jneville0815">
+					<svg class="icons__github">
+						<use xlink:href="../img/sprite.svg#icon-github"></use>
+					</svg>
+				</a>
+			</div>
+		</header>
+		<main>
+			<div class="small-screen">
+				<div class="navbar">
+					<h1 style="float: left; transform: translateY(-2rem);">Jimmy Neville</h1>
+					<div class="dropdown">
+						<button class="dropbtn">Menu
+							<i class="fa fa-caret-down"></i>
+						</button>
+						<div class="dropdown-content">
+							<a href="../index.html#SH0">Home</a>
+							<a href="../index.html#SH1">About Me</a>
+							<a href="../index.html#SH2">Tutorials</a>
+							<a href="../index.html#SH3">Workout</a>
+							<a href="../index.html#SH4">Articles</a>
+							<a href="../index.html#SH5">Books</a>
+						</div>
+					</div> 
+				</div>
+			</div>
+			
+			<div class="main-section">
+				<div class="main-section__title">
+					Linear Regression
+				</div>
+				<div class="main-section__text">
+					<p><i>4/7/2020</i> - 
+
+
+<!-- 					$$J(\theta_0, \theta_1) = \frac{1}{2m} \sum_{i=1}^{m} (h_\theta(x^i) - y^i)^2$$
+
+					repeat until convergence:
+					$$\theta_j := \theta_j - \alpha \frac{\partial}{\partial\theta_j} J(\theta_0, \theta_1)$$
+					where j = 0,1
+
+					\(...\) -->
+
+<!-- 					Red line m: 77
+					Green line m: 71.2846347607053
+					Red line b: -50
+					Green line b: -2204.030226700242 -->
+
+
+					Linear regression is one of the most well-known machine learning algorithms. Most people interested in machine learning will study this algorithm first. In this tutorial we're going to take a look at the math involved in the algorithm while also learning some basic machine learning terminology. I'm writing this tutorial after completing the linear regression portion of <a href="https://www.coursera.org/learn/machine-learning" class="in-text-link">Andrew Ng's Machine Learning Course</a>.
+
+					<h2>Unsupervised Learning</h2>
+
+					<p>Machine learning algorithms are classified as either unsupervised learning algorithms, supervised learning algorithms or reinforcement learning algorithms. Linear regression is an unsupervised learning algorithm which means that the output of the model is known in advance. An example of an unsupervised learning algorithm is a dataset that contains a list of houses with the size of each house and the price of each house. We know in advance that given the size of a house we want to predict the price. Supervised learning algorithms and reinforcement learning algorithms will be explained in a later tutorial. Below we have an example housing dataset with 5 entries:  </p>
+
+					<img src="../img/lr-0.png" alt="dataframe" class="lr-0">
+
+					<h2>Regression Problem</h2>
+
+					<p>Unsupervised learning algorithms are broken down into regression problems and classification problems. Regression problems have continuous valued output, and classification problems have discrete valued output. Examples of continuous valued output are prices and temperatures, and examples of discrete valued output are true/false values and anything else that can be split up into individual categories.</p>
+
+					<h2>Visualizing Our Data</h2>
+
+					<p>To get a better understanding of the dataset we're working with it helps to visualize the data. Here we plot the output (prices) on the y axis and the input (size) on the x axis:</p>
+
+					<img src="../img/lr-1.png" alt="graph" class="lr-1">
+
+					<p>Our goal with linear regression is finding a regression line that fits our data best. In the next plot you can see a green regression line and a red regression line; the green line fits our data best because the cost function is minimized when using the green line.  </p>
+
+					<img src="../img/lr-2.png" alt="graph" class="lr-2">
+
+					<h2>The Cost Function</h2>
+
+					<hr>
+					<br>
+
+					<a href="../index.html" class="in-text-link top">Back to homepage</a>
+				</div>
+			</div>
+			<div class="footer">
+				Contact Me: Jneville0815@yahoo.com
+			</div>
+		</main>
+	</body>
+</html>

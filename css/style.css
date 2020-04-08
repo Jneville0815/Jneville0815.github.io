@@ -210,11 +210,21 @@ samp {
   width: 30rem;
   height: 30rem;
   margin: 0 auto; }
+  @media screen and (max-width: 1100px) {
+    .lr-0 {
+      width: 15rem;
+      height: 15rem;
+      margin: 0 auto; } }
 
 .lr-1, .lr-2 {
   width: 60rem;
   height: 40rem;
   margin: 0 auto; }
+  @media screen and (max-width: 1100px) {
+    .lr-1, .lr-2 {
+      width: 30rem;
+      height: 20rem;
+      margin: 0 auto; } }
 
 .footer {
   font-size: 2rem;

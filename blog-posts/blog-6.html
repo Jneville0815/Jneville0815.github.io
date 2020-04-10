@@ -91,11 +91,11 @@
 
 					<h2>Visualizing Our Data</h2>
 
-					<p>To get a better understanding of the dataset we're working with it helps to visualize the data. Here we plot the output (prices) on the y axis and the input (size) on the x axis:</p>
+					<p>To get a better understanding of the dataset we're working with it helps to visualize the data. Note that sometimes you will hear input values (x's) called "independent variables," and the output value (y) called a "dependent variable." For this example we only have one independent variable. Here we plot the price on the y-axis and the size on the x-axis. </p>
 
 					<img src="../img/lr-1.png" alt="graph" class="lr-1">
 
-					<p>Our goal with linear regression is to find a regression line that fits our data best. In the next plot you can see a green regression line and a red regression line; the green line fits our data best because the cost function is minimized when using the green line.  </p>
+					<p>Our goal with linear regression is to find a regression line that best fits our data. In the next plot you can see a green regression line and a red regression line; the green line fits our data best because the cost function is minimized when using the green line.  </p>
 
 					<img src="../img/lr-2.png" alt="graph" class="lr-2">
 
@@ -116,6 +116,22 @@
 					<p>and for our final answer we get $$J(-50, 77) = 92,833,750$$</p>
 
 					<p>If we were to repeat the same process for the green line, our final answer would be $$J(-2204.03, 71.28) = 30,264,510.62$$</p>
+
+					<p>30,264,510.62 is the absolute lowest value we can get from the cost function. In other words, any combination of \(\theta_0\) and \(\theta_1\) values that we plug into the equation will not give us a value less than 30,264,510.62. Now let's take a look at how we find our \(\theta_0\) and \(\theta_1\) values using gradient descent.</p>
+
+					<h2>Gradient Descent</h2>
+
+					<p>The general algorithm for gradient descent is defined as $$\theta_j := \theta_j - \alpha \frac{\partial}{\partial\theta_j} J(\theta_0, \theta_1)$$</p>
+
+					<p>Note that the ":=" operator is the assignment operator, and \(\alpha\) is a constant called the learning rate. The learning rate controls how large each step of gradient descent will be. Also note that \(\frac{\partial}{\partial\theta_j} J(\theta_0, \theta_1)\) represents taking the partial derivative of the cost function. I will not go over the calculus involved in taking a partial derivative in this tutorial, but there are many <a href="https://www.youtube.com/results?search_query=partial+derivatives" class="in-text-link">videos</a> on the subject if you're interested.</p>
+
+					<p>In this equation \(j = 0,1\) represents the feature index number, and this algorithm will be repeated until convergence.</p>
+
+					<p>Basically what happens here is the values of \(\theta_0\) and \(\theta_1\) keep getting updated until the cost function is minimized. This algorithm can be used for many machine learning applications, but in this tutorial we'll look at how it works with linear regression.</p>
+
+					<p>After taking the partial derivative of \(\theta_0\) and \(\theta_1\), the gradient descent algorithm is defined as $$\theta_0 := \theta_0 - \alpha \frac{1}{m} \sum_{i=0}^{m-1} (h_\theta(x^i) - y^i)$$ $$\theta_1 := \theta_1 - \alpha \frac{1}{m} \sum_{i=0}^{m-1} (h_\theta(x^i) - y^i) * x^i$$</p>
+
+					<p>This algorithm is specific to linear regression and will also be repeated until convergence.</p>
 
 					<hr>
 					<br>

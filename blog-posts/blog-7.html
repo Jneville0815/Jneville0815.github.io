@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../css/style.css">
+        <link href="https://fonts.googleapis.com/css?family=Noto+Serif" rel="stylesheet">
+        <link rel="shortcut icon" type="image/png" href="../img/favicon.ico">
+
+     <!--    mathjax.org - using latex in the html -->
+		<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+		<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        
+        <title>Logistic Regression</title>
+	</head>
+	<body>
+		<header class="header">
+			<h1 class="header__name">Jimmy Neville</h1>
+			<a href="../index.html" class="header__link">Home</a>
+			<a href="../index.html#SH1" class="header__link">About Me</a>
+			<a href="../index.html#SH2" class="header__link">Tutorials</a>
+			<a href="../index.html#SH3" class="header__link">Workout</a>
+			<a href="../index.html#SH4" class="header__link">Articles</a>
+			<a href="../index.html#SH5" class="header__link">Books</a>
+			<div class="icons">
+				<a href="https://www.facebook.com/jimmy.neville.733">
+					<svg class="icons__facebook">
+						<use xlink:href="../img/sprite.svg#icon-facebook"></use>
+					</svg>
+				</a>
+				<a href="https://github.com/jneville0815">
+					<svg class="icons__github">
+						<use xlink:href="../img/sprite.svg#icon-github"></use>
+					</svg>
+				</a>
+			</div>
+		</header>
+		<main>
+			<div class="small-screen">
+				<div class="navbar">
+					<h1 style="float: left; transform: translateY(-2rem);">Jimmy Neville</h1>
+					<div class="dropdown">
+						<button class="dropbtn">Menu
+							<i class="fa fa-caret-down"></i>
+						</button>
+						<div class="dropdown-content">
+							<a href="../index.html#SH0">Home</a>
+							<a href="../index.html#SH1">About Me</a>
+							<a href="../index.html#SH2">Tutorials</a>
+							<a href="../index.html#SH3">Workout</a>
+							<a href="../index.html#SH4">Articles</a>
+							<a href="../index.html#SH5">Books</a>
+						</div>
+					</div> 
+				</div>
+			</div>
+			
+			<div class="main-section">
+				<div class="main-section__title">
+					Logistic Regression
+				</div>
+				<div class="main-section__text">
+					<p><i>4/7/2020</i> - 
+					In the <a href="blog-6.html" class="in-text-link">previous tutorial</a> we learned about Linear Regression. We studied the math involved in the algorithm, and we also learned some basic machine learning terminology. In this tutorial we’ll be expanding on the last tutorial and looking at logistic regression. Some key terms and notation that were defined in the previous tutorial will also be used in this tutorial. If you haven’t read the previous tutorial, now is a good time to do so.</p>
+
+					<p>I'm writing this tutorial after completing the logistic regression portion of <a href="https://www.coursera.org/learn/machine-learning" class="in-text-link">Andrew Ng's Machine Learning Course</a>.</p>
+
+					<h2>Classification</h2>
+
+					<p>Logistic regression, like linear regression, is a supervised learning algorithm. Unlike linear regression, logistic regression is a classification problem. Classification problems have discrete valued output which means that the set of all possible output values is limited to a finite amount. In this tutorial we will be discussing the binary classification problem in which the output value can only be 0 or 1. Most of what’s mentioned in this tutorial will also apply to the multiple-class case. The example we work through in this tutorial will be based on the data in the table below:</p>
+
+					<img src="../img/logr-0.png" alt="dataframe" class="logr-0">
+
+					<p>When implementing logistic regression, you will always have more than six data points, but I have simplified the dataset for this example. The \(x\) values are test scores that represents the number of words typed per minute by an individual applying for an office assistant job. The y values represent whether they got the job (1) or didn’t get the job (0). </p>
+
+					<h2>Visualizing the Data</h2>
+
+					<h2>Hypothesis</h2>
+
+					<h2>Decision Boundary</h2>
+
+					<h2>Cost Function</h2>
+
+					<h2>Gradient Descent</h2>
+
+					<hr>
+					<br>
+
+					<a href="../index.html" class="in-text-link top">Back to homepage</a>
+				</div>
+			</div>
+			<div class="footer">
+				Contact Me: Jneville0815@yahoo.com
+			</div>
+		</main>
+	</body>
+</html>
